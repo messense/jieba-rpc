@@ -2,13 +2,13 @@
 from __future__ import absolute_import, unicode_literals
 import msgpackrpc
 
-from jiebarpc.handler import JiebaRPCHandler
+from jiebarpc.dispatcher import JiebaRPCDispatcher
 
 
 class JiebaRPCServer(msgpackrpc.Server):
 
     def __init__(self, dispatcher=None, *args, **kwargs):
-        dispatcher or dispatcher or JiebaRPCHandler()
+        dispatcher = dispatcher or JiebaRPCDispatcher()
         super(JiebaRPCServer, self).__init__(
             dispatcher,
             *args,

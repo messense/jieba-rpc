@@ -13,7 +13,7 @@ from jiebarpc.utils import to_text
 logger = logging.getLogger(__name__)
 
 
-class JiebaRPCHandler(object):
+class JiebaRPCDispatcher(object):
 
     def __init__(self, enable_parallel=True):
         logger.info('Initializing jieba...')
