@@ -2,12 +2,18 @@
 from __future__ import absolute_import, unicode_literals
 import msgpackrpc
 
+from jiebarpc.utils import ensure_unicode
+
 
 class JiebaRPCClient(msgpackrpc.Client):
 
     def __init__(self, host, port, *args, **kwargs):
         address = msgpackrpc.Address(host, port)
         super(JiebaRPCClient, self).__init__(address, *args, **kwargs)
+
+    @ensure_unicode
+    def call(self, method, *args):
+        return super(JiebaRPCClient, self).call(method, *args)
 
     def cut(self, sentence, cut_all=False, HMM=True):
         return self.call(
