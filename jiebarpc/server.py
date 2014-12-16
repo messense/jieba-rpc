@@ -7,9 +7,10 @@ from jiebarpc.handler import JiebaRPCHandler
 
 class JiebaRPCServer(msgpackrpc.Server):
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, dispatcher=None, *args, **kwargs):
+        dispatcher or dispatcher or JiebaRPCHandler()
         super(JiebaRPCServer, self).__init__(
-            JiebaRPCHandler(),
+            dispatcher,
             *args,
             **kwargs
         )
