@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import absolute_import, unicode_literals
 import logging
-import multiprocessing
 
 import jieba
 import jieba.analyse
@@ -15,13 +14,13 @@ logger = logging.getLogger(__name__)
 
 class JiebaRPCDispatcher(object):
 
-    def __init__(self, enable_parallel=True):
+    def __init__(self, processnum=1):
         logger.info('Initializing jieba...')
         jieba.initialize()
         logger.info('Successfully initialized jieba.')
-        if enable_parallel:
+        if processnum > 1:
             logger.info('Jiea running in parallel mode.')
-            jieba.enable_parallel(multiprocessing.cpu_count())
+            jieba.enable_parallel(processnum)
 
     def cut(self, sentence, cut_all=False, HMM=True):
         segs = jieba.cut(sentence, cut_all=cut_all, HMM=HMM)
