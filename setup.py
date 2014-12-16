@@ -14,7 +14,7 @@ with open('requirements.txt') as f:
 
 setup(
     name='jieba-rpc',
-    version='0.0.1',
+    version='0.0.2',
     author='messense',
     author_email='messense@icloud.com',
     url='https://github.com/messense/jieba-rpc',
