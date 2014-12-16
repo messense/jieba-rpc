@@ -35,6 +35,6 @@ class JiebaRPCTestCase(unittest.TestCase):
 
     def test_cut(self):
         segs = self.client.cut(self.SENTENCE)
-        self.assertIn('小明', segs)
-        self.assertIn('硕士', segs)
-        self.assertIn('毕业', segs)
+        self.assertTrue('小明' in segs)
+        self.assertTrue('硕士' in segs)
+        self.assertTrue('毕业' in segs)
