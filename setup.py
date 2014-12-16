@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 from __future__ import with_statement
 import os
+import sys
 from setuptools import setup, find_packages
 
 readme = 'README.md'
@@ -9,8 +10,15 @@ if os.path.exists('README.rst'):
 with open(readme) as f:
     long_description = f.read()
 
-with open('requirements.txt') as f:
-    requirements = [l for l in f.read().splitlines() if l]
+requirements = [
+    'msgpack-rpc-python',
+    'six',
+]
+
+if sys.version_info[0] < 3:
+    requirements.append('jieba')
+else:
+    requirements.append('jieba3k')
 
 setup(
     name='jieba-rpc',
@@ -35,5 +43,7 @@ setup(
         'Programming Language :: Python',
         'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3.3',
+        'Programming Language :: Python :: 3.4',
     ],
 )
