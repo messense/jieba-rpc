@@ -22,7 +22,7 @@ else:
 
 setup(
     name='jieba-rpc',
-    version='0.0.2',
+    version='0.0.3',
     author='messense',
     author_email='messense@icloud.com',
     url='https://github.com/messense/jieba-rpc',
@@ -43,7 +43,5 @@ setup(
         'Programming Language :: Python',
         'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3.3',
-        'Programming Language :: Python :: 3.4',
     ],
 )
