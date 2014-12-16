@@ -24,7 +24,7 @@ class JiebaRPCTestCase(unittest.TestCase):
             stderr=PIPE,
             close_fds=True,
         )
-        time.sleep(5)
+        time.sleep(10)
         self.client = JiebaRPCClient(self.HOST, int(self.PORT))
 
     def tearDown(self):
