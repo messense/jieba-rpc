@@ -47,7 +47,7 @@ if __name__ == '__main__':
 
     host = sys.argv[1]
     port = int(sys.argv[2])
-    sys.exit(main(host, port)) -*- coding: utf-8 -*-
+    sys.exit(main(host, port))
 ```
 
 
