@@ -22,7 +22,7 @@ else:
 
 setup(
     name='jieba-rpc',
-    version='0.0.3',
+    version='0.0.4',
     author='messense',
     author_email='messense@icloud.com',
     url='https://github.com/messense/jieba-rpc',

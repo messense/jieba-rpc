@@ -6,7 +6,7 @@ from jiebarpc.client import JiebaRPCClient
 from jiebarpc.dispatcher import JiebaRPCDispatcher
 
 
-__version__ = '0.0.3'
+__version__ = '0.0.4'
 __author__ = 'messense<messense@icloud.com>'
 
 __all__ = [
