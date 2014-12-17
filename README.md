@@ -2,7 +2,7 @@ jieba-rpc
 =============
 [![Build Status](https://travis-ci.org/messense/jieba-rpc.svg?branch=master)](https://travis-ci.org/messense/jieba-rpc)
 
-Simple [jieba](https://github.com/fxsjy/jieba) RPC server based on [msgpack-rpc-python]().
+Simple [jieba](https://github.com/fxsjy/jieba) RPC server based on [msgpack-rpc-python](https://github.com/msgpack-rpc/msgpack-rpc-python).
 
 
 ## Installation
